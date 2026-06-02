@@ -1,8 +1,3 @@
-agro-sustentavel/
-│
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── README.md
+├── style.css
+└── script.js
