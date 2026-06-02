@@ -1,0 +1,41 @@
+let producao = 50;
+let ambiente = 50;
+
+function atualizarTela() {
+
+    document.getElementById("producao").textContent = producao;
+    document.getElementById("ambiente").textContent = ambiente;
+
+    let mensagem = "";
+
+    if (producao >= 80 && ambiente >= 80) {
+        mensagem = "🏆 Excelente! Produção alta e meio ambiente preservado.";
+    }
+    else if (producao > ambiente) {
+        mensagem = "⚠ Atenção! Você está produzindo muito, mas prejudicando a natureza.";
+    }
+    else if (ambiente > producao) {
+        mensagem = "🌿 Ambiente protegido, mas a produção pode melhorar.";
+    }
+
+    document.getElementById("resultado").textContent = mensagem;
+}
+
+function aduboQuimico() {
+    producao += 10;
+    ambiente -= 10;
+    atualizarTela();
+}
+
+function agriculturaSustentavel() {
+    producao += 5;
+    ambiente += 10;
+    atualizarTela();
+}
+
+function economizarAgua() {
+    ambiente += 5;
+    atualizarTela();
+}
+
+atualizarTela();
